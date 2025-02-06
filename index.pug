@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Сайт на Pug
+    link(rel="stylesheet", href="../css/style.css")
+  body 
+    - var games = [{"title": "Red Dead Redemption 2", "releaseDate": "26 октября 2018", "image": "../img/red_dead_redemption_2.jpg"}, {"title": "The Last of Us Part II", "releaseDate": "19 июня 2020", "image": "../img/The_last_of_us_2.png"}, {"title": "Cyberpunk 2077", "releaseDate": "10 декабря 2020", "image": "../img/Cyberpunk_2077.jpg"}, {"title": "Ghost of Tsushima", "releaseDate": "17 июля 2020", "image": "../img/Ghost_of_Tsushima.jpg"}, {"title": "Horizon Zero Dawn", "releaseDate": "28 февраля 2017", "image": "../img/Horizon_Zero_Dawn.jpg"}, {"title": "God of War", "releaseDate": "20 апреля 2018", "image": "../img/God_of_War.jpg"}, {"title": "Marvel's Spider-Man", "releaseDate": "7 сентября 2018", "image": "../img/Spider_Man.jpg"}]
+
+    .container
+      h1.title Мои любимые игры
+      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis illum exercitationem natus saepe eum iusto ducimus deserunt consequuntur, porro doloremque dolorum vitae placeat, excepturi ipsa iste tempore beatae maiores corporis sequi nesciunt quia quam. Laudantium minus itaque fugiat accusamus alias.
+      ul.grid
+        each game, index in games
+          li.grid_item 
+            article.card 
+              a.card_image(href="")
+                img(src=game.image, alt="")
+              h2.card_title= game.title
+                a(href="") 
+              span.card_date Дата выхода: #{game.releaseDate}
