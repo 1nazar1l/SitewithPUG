@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+    font-family: "Roboto", serif;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &_item {
+        width: 295px;
+        margin-bottom: 25px;
+    }
+}
+
+.card {
+    height: 100%;
+    padding: 20px;
+    border: 1px solid #928a8a;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: rgb(228, 216, 161);
+    transition: all 0.3s ease-out;
+
+    &_image {
+        display: block;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    &_title {
+        font-size: 20px;
+        margin-bottom: 20px;
+        transition: all 0.1s ease;
+    }
+
+    &_date {
+        margin-top: auto;
+        font-size: 18px;
+        color: #666;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+
+        &_title {
+            color: rgb(206, 192, 130);
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .grid_item {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .grid_item {
+        flex-basis: 45%;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+
+    .grid_item {
+        flex-basis: 30%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid_item {
+        flex-basis: 25%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        width: 70%;
+    }
+
+    .grid_item {
+        flex-basis: 23%;
+    }
+}
